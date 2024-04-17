@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for Your Candidate</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vote for Your Candidate</h1>
+        <div class="candidate">
+            <input type="radio" id="candidate1" name="candidate" value="candidate1">
+            <label for="candidate1">Candidate 1</label>
+        </div>
+        <div class="candidate">
+            <input type="radio" id="candidate2" name="candidate" value="candidate2">
+            <label for="candidate2">Candidate 2</label>
+        </div>
+        <div class="candidate">
+            <input type="radio" id="candidate3" name="candidate" value="candidate3">
+            <label for="candidate3">Candidate 3</label>
+        </div>
+        <button class="vote-button" onclick="castVote()">Vote</button>
+    </div>
+
+    <script>
+        function castVote() {
+            var selectedCandidate = document.querySelector('input[name="candidate"]:checked');
+            if (selectedCandidate) {
+                alert("Thank you for voting for " + selectedCandidate.value + "!");
+                // Here you can send the vote data to the server using AJAX or any other method
+            } else {
+                alert("Please select a candidate before voting.");
+            }
+        }
+    </script>
+</body>
+</html>

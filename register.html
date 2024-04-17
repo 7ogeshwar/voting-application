@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div>
+        <h2>Take Charge of
+            Your Vote</h2>
+       </div>
+    <div class="container">
+        <h1>Register</h1>
+        <input type="text" class="un" id="username" placeholder="Username">
+        <input type="password" class="un" id="password" placeholder="Password">
+        <select id="role"> <!-- Add select element for selecting role -->
+            <option value="user">User</option> <!-- Default selection is User -->
+            <option value="admin">Admin</option>
+        </select>
+        <button onclick="register()">Register</button>
+        <p id="error-message" class="error-message"></p>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    </div>
+
+    <script src="login.js" defer></script>
+</body>
+</html>
